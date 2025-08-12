@@ -1,0 +1,405 @@
+# Test Ip 192.168.137.1
+C:\Users\ayu41>nmap --version
+Nmap version 7.97 ( https://nmap.org )
+Platform: i686-pc-windows-windows
+Compiled with: nmap-liblua-5.4.7 openssl-3.0.16 nmap-libssh2-1.11.1 nmap-libz-1.3.1 nmap-libpcre2-10.45 Npcap-1.82 nmap-libdnet-1.18.0 ipv6
+Compiled without:
+Available nsock engines: iocp poll select
+
+C:\Users\ayu41>nmap 192.168.137.1
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:28 +0530
+Nmap scan report for 192.168.137.1
+Host is up (0.000074s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap done: 1 IP address (1 host up) scanned in 0.79 seconds
+
+C:\Users\ayu41>nmap -sV 192.168.137.1
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:28 +0530
+Nmap scan report for 192.168.137.1
+Host is up (0.00034s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE       VERSION
+135/tcp open  msrpc         Microsoft Windows RPC
+139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.20 seconds
+
+C:\Users\ayu41>nmap -A 192.168.137.1
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:29 +0530
+Nmap scan report for 192.168.137.1
+Host is up (0.00041s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE       VERSION
+135/tcp open  msrpc         Microsoft Windows RPC
+139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.97%E=4%D=8/12%OT=135%CT=1%CU=41938%PV=Y%DS=0%DC=L%G=Y%TM=689B1E
+OS:B7%P=i686-pc-windows-windows)SEQ(SP=102%GCD=1%ISR=104%TI=I%CI=I%II=I%SS=
+OS:S%TS=A)SEQ(SP=103%GCD=1%ISR=104%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=104%GCD=
+OS:1%ISR=109%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=105%GCD=1%ISR=107%TI=I%CI=I%II
+OS:=I%SS=S%TS=A)SEQ(SP=105%GCD=1%ISR=10B%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MF
+OS:FD7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8S
+OS:T11%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN
+OS:(R=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%
+OS:F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z
+OS:%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 0 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time:
+|   date: 2025-08-12T10:59:57
+|_  start_date: N/A
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled but not required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 34.21 seconds
+
+C:\Users\ayu41>nmap -A 192.168.137.1 -oN C:\Users\ayu41\Desktop\Demo_scan_results.txt
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:31 +0530
+Nmap scan report for 192.168.137.1
+Host is up (0.00036s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE       VERSION
+135/tcp open  msrpc         Microsoft Windows RPC
+139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.97%E=4%D=8/12%OT=135%CT=1%CU=31476%PV=Y%DS=0%DC=L%G=Y%TM=689B1F
+OS:22%P=i686-pc-windows-windows)SEQ(SP=101%GCD=1%ISR=107%TI=I%CI=I%II=I%SS=
+OS:S%TS=A)SEQ(SP=102%GCD=1%ISR=10C%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=103%GCD=
+OS:1%ISR=107%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=103%GCD=1%ISR=10A%TI=I%CI=I%II
+OS:=I%SS=S%TS=A)SEQ(SP=106%GCD=1%ISR=107%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MF
+OS:FD7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8S
+OS:T11%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN
+OS:(R=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%
+OS:F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z
+OS:%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 0 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled but not required
+| smb2-time:
+|   date: 2025-08-12T11:01:43
+|_  start_date: N/A
+|_clock-skew: -1s
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 34.20 seconds
+
+C:\Users\ayu41>
+
+# Test IP:192.168.137.113
+
+
+C:\Users\ayu41>nmap 192.168.137.113
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:33 +0530
+Nmap scan report for 192.168.137.113
+Host is up (0.025s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2869/tcp open  icslap
+5500/tcp open  hotline
+MAC Address: D0:39:57:DC:7E:35 (Liteon Technology)
+
+Nmap done: 1 IP address (1 host up) scanned in 10.78 seconds
+
+C:\Users\ayu41>nmap -sV 192.168.137.113
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:34 +0530
+Nmap scan report for 192.168.137.113
+Host is up (0.023s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+2869/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+5500/tcp open  hotline?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5500-TCP:V=7.97%I=7%D=8/12%Time=689B1FCE%P=i686-pc-windows-windows%
+SF:r(GetRequest,1610,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20Origin\r\nAccess-
+SF:Control-Allow-Credentials:\x20true\r\nAccept-Ranges:\x20bytes\r\nCache-
+SF:Control:\x20public,\x20max-age=0\r\nLast-Modified:\x20Sun,\x2010\x20Aug
+SF:\x202025\x2012:08:45\x20GMT\r\nETag:\x20W/\"efb-19893e21973\"\r\nConten
+SF:t-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x205328\r\nDa
+SF:te:\x20Tue,\x2012\x20Aug\x202025\x2011:04:50\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<head>\r\n\x
+SF:20\x20\x20\x20<meta\x20charset=\"UTF-8\">\r\n\x20\x20\x20\x20<meta\x20n
+SF:ame=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0
+SF:\">\r\n\x20\x20\x20\x20<title>Portfolio</title>\r\n\x20\x20\x20\x20<lin
+SF:k\x20rel=\"stylesheet\"\x20href=\"style\.css\">\r\n\x20\x20\x20\x20<sty
+SF:le>\r\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\r\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20margin:\x200;\r\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20font-family:\x20'Poppins',\x20sans-serif;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-grad
+SF:ient\(135deg,\x20#0f2027,\x20#203a43,\x20#2c5364\);\r\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\r\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20hidden;\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20{\r\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20sticky;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba\(0,\x200,\x200,
+SF:\x20")%r(HTTPOptions,FA,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x20
+SF:Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-Allow-Crede
+SF:ntials:\x20true\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,
+SF:POST,DELETE\r\nContent-Length:\x200\r\nDate:\x20Tue,\x2012\x20Aug\x2020
+SF:25\x2011:04:50\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,F
+SF:A,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x20Origin,\x20Access-Cont
+SF:rol-Request-Headers\r\nAccess-Control-Allow-Credentials:\x20true\r\nAcc
+SF:ess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent
+SF:-Length:\x200\r\nDate:\x20Tue,\x2012\x20Aug\x202025\x2011:04:50\x20GMT\
+SF:r\nConnection:\x20close\r\n\r\n");
+MAC Address: D0:39:57:DC:7E:35 (Liteon Technology)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.27 seconds
+
+C:\Users\ayu41>nmap -A 192.168.137.113
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:35 +0530
+Nmap scan report for 192.168.137.113
+Host is up (0.045s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+2869/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+5500/tcp open  hotline?
+| fingerprint-strings:
+|   GetRequest:
+|     HTTP/1.1 200 OK
+|     Vary: Origin
+|     Access-Control-Allow-Credentials: true
+|     Accept-Ranges: bytes
+|     Cache-Control: public, max-age=0
+|     Last-Modified: Sun, 10 Aug 2025 12:08:45 GMT
+|     ETag: W/"efb-19893e21973"
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 5328
+|     Date: Tue, 12 Aug 2025 11:06:02 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>Portfolio</title>
+|     <link rel="stylesheet" href="style.css">
+|     <style>
+|     body {
+|     margin: 0;
+|     font-family: 'Poppins', sans-serif;
+|     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+|     color: #fff;
+|     overflow-x: hidden;
+|     header {
+|     position: sticky;
+|     top: 0;
+|     background: rgba(0, 0, 0,
+|   HTTPOptions, RTSPRequest:
+|     HTTP/1.1 204 No Content
+|     Vary: Origin, Access-Control-Request-Headers
+|     Access-Control-Allow-Credentials: true
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Content-Length: 0
+|     Date: Tue, 12 Aug 2025 11:06:02 GMT
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5500-TCP:V=7.97%I=7%D=8/12%Time=689B2016%P=i686-pc-windows-windows%
+SF:r(GetRequest,1029,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20Origin\r\nAccess-
+SF:Control-Allow-Credentials:\x20true\r\nAccept-Ranges:\x20bytes\r\nCache-
+SF:Control:\x20public,\x20max-age=0\r\nLast-Modified:\x20Sun,\x2010\x20Aug
+SF:\x202025\x2012:08:45\x20GMT\r\nETag:\x20W/\"efb-19893e21973\"\r\nConten
+SF:t-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x205328\r\nDa
+SF:te:\x20Tue,\x2012\x20Aug\x202025\x2011:06:02\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<head>\r\n\x
+SF:20\x20\x20\x20<meta\x20charset=\"UTF-8\">\r\n\x20\x20\x20\x20<meta\x20n
+SF:ame=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0
+SF:\">\r\n\x20\x20\x20\x20<title>Portfolio</title>\r\n\x20\x20\x20\x20<lin
+SF:k\x20rel=\"stylesheet\"\x20href=\"style\.css\">\r\n\x20\x20\x20\x20<sty
+SF:le>\r\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\r\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20margin:\x200;\r\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20font-family:\x20'Poppins',\x20sans-serif;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-grad
+SF:ient\(135deg,\x20#0f2027,\x20#203a43,\x20#2c5364\);\r\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\r\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20hidden;\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20{\r\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20sticky;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba\(0,\x200,\x200,
+SF:\x20")%r(HTTPOptions,FA,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x20
+SF:Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-Allow-Crede
+SF:ntials:\x20true\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,
+SF:POST,DELETE\r\nContent-Length:\x200\r\nDate:\x20Tue,\x2012\x20Aug\x2020
+SF:25\x2011:06:02\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,F
+SF:A,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x20Origin,\x20Access-Cont
+SF:rol-Request-Headers\r\nAccess-Control-Allow-Credentials:\x20true\r\nAcc
+SF:ess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent
+SF:-Length:\x200\r\nDate:\x20Tue,\x2012\x20Aug\x202025\x2011:06:02\x20GMT\
+SF:r\nConnection:\x20close\r\n\r\n");
+MAC Address: D0:39:57:DC:7E:35 (Liteon Technology)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 11|10|2022|2008|Phone|7 (96%)
+OS CPE: cpe:/o:microsoft:windows_11 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_server_2022 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_7
+Aggressive OS guesses: Microsoft Windows 11 21H2 (96%), Microsoft Windows 10 (91%), Microsoft Windows 10 1607 (90%), Microsoft Windows Server 2022 (90%), Microsoft Windows Server 2008 SP1 (88%), Microsoft Windows Phone 7.5 or 8.0 (87%), Microsoft Windows Embedded Standard 7 (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 4s
+|_nbstat: NetBIOS name: TRING, NetBIOS user: <unknown>, NetBIOS MAC: d0:39:57:dc:7e:35 (Liteon Technology)
+| smb2-time:
+|   date: 2025-08-12T11:06:09
+|_  start_date: N/A
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled but not required
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   45.12 ms 192.168.137.113
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 70.00 seconds
+
+C:\Users\ayu41>nmap -A 192.168.137.113 -oN C:\Users\ayu41\Desktop\Demo_scan_results.txt --append-output
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-12 16:37 +0530
+Nmap scan report for 192.168.137.113
+Host is up (0.014s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+2869/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+5500/tcp open  hotline?
+| fingerprint-strings:
+|   GetRequest:
+|     HTTP/1.1 200 OK
+|     Vary: Origin
+|     Access-Control-Allow-Credentials: true
+|     Accept-Ranges: bytes
+|     Cache-Control: public, max-age=0
+|     Last-Modified: Sun, 10 Aug 2025 12:08:45 GMT
+|     ETag: W/"efb-19893e21973"
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 5328
+|     Date: Tue, 12 Aug 2025 11:08:11 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>Portfolio</title>
+|     <link rel="stylesheet" href="style.css">
+|     <style>
+|     body {
+|     margin: 0;
+|     font-family: 'Poppins', sans-serif;
+|     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+|     color: #fff;
+|     overflow-x: hidden;
+|     header {
+|     position: sticky;
+|     top: 0;
+|     background: rgba(0, 0, 0,
+|   HTTPOptions, RTSPRequest:
+|     HTTP/1.1 204 No Content
+|     Vary: Origin, Access-Control-Request-Headers
+|     Access-Control-Allow-Credentials: true
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Content-Length: 0
+|     Date: Tue, 12 Aug 2025 11:08:11 GMT
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5500-TCP:V=7.97%I=7%D=8/12%Time=689B2097%P=i686-pc-windows-windows%
+SF:r(GetRequest,1029,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20Origin\r\nAccess-
+SF:Control-Allow-Credentials:\x20true\r\nAccept-Ranges:\x20bytes\r\nCache-
+SF:Control:\x20public,\x20max-age=0\r\nLast-Modified:\x20Sun,\x2010\x20Aug
+SF:\x202025\x2012:08:45\x20GMT\r\nETag:\x20W/\"efb-19893e21973\"\r\nConten
+SF:t-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x205328\r\nDa
+SF:te:\x20Tue,\x2012\x20Aug\x202025\x2011:08:11\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<head>\r\n\x
+SF:20\x20\x20\x20<meta\x20charset=\"UTF-8\">\r\n\x20\x20\x20\x20<meta\x20n
+SF:ame=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0
+SF:\">\r\n\x20\x20\x20\x20<title>Portfolio</title>\r\n\x20\x20\x20\x20<lin
+SF:k\x20rel=\"stylesheet\"\x20href=\"style\.css\">\r\n\x20\x20\x20\x20<sty
+SF:le>\r\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\r\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20margin:\x200;\r\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20font-family:\x20'Poppins',\x20sans-serif;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-grad
+SF:ient\(135deg,\x20#0f2027,\x20#203a43,\x20#2c5364\);\r\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\r\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20hidden;\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20header\x20{\r\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20sticky;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba\(0,\x200,\x200,
+SF:\x20")%r(HTTPOptions,FA,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x20
+SF:Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-Allow-Crede
+SF:ntials:\x20true\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,
+SF:POST,DELETE\r\nContent-Length:\x200\r\nDate:\x20Tue,\x2012\x20Aug\x2020
+SF:25\x2011:08:11\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,F
+SF:A,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x20Origin,\x20Access-Cont
+SF:rol-Request-Headers\r\nAccess-Control-Allow-Credentials:\x20true\r\nAcc
+SF:ess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent
+SF:-Length:\x200\r\nDate:\x20Tue,\x2012\x20Aug\x202025\x2011:08:11\x20GMT\
+SF:r\nConnection:\x20close\r\n\r\n");
+MAC Address: D0:39:57:DC:7E:35 (Liteon Technology)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 11|10|2022|2008|Phone|7 (96%)
+OS CPE: cpe:/o:microsoft:windows_11 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_server_2022 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_7
+Aggressive OS guesses: Microsoft Windows 11 21H2 (96%), Microsoft Windows 10 (91%), Microsoft Windows 10 1607 (91%), Microsoft Windows Server 2022 (90%), Microsoft Windows Server 2008 SP1 (88%), Microsoft Windows Phone 7.5 or 8.0 (88%), Microsoft Windows Embedded Standard 7 (87%), Microsoft Windows 10 1511 - 1607 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 3s
+| smb2-time:
+|   date: 2025-08-12T11:08:17
+|_  start_date: N/A
+|_nbstat: NetBIOS name: TRING, NetBIOS user: <unknown>, NetBIOS MAC: d0:39:57:dc:7e:35 (Liteon Technology)
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled but not required
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   14.24 ms 192.168.137.113
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 77.85 seconds
+
+C:\Users\ayu41>
